@@ -1,0 +1,13 @@
+const actionTypes = {
+  DEPOSIT: 'DEPOSIT',
+  WITHDRAW: 'WITHDRAW',
+  BUY: 'BUY',
+  SELL: 'SELL',
+  INCREASE: 'INCREASE',
+  DECREASE: 'DECREASE',
+  SET_ERROR: 'SET_ERROR',
+  RESET_ERROR: 'RESET_ERROR',
+  HISTORY_RECORD: 'HISTORY_RECORD',
+};
+
+export default actionTypes;
