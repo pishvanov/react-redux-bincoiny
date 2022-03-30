@@ -9,7 +9,7 @@ import {
   decrease, increase, setError, resetError,
 } from '../../redux/actions';
 import local from '../../constants/local';
-import './BitcoinPrice.css';
+import '../pages.css';
 
 function BitcoinPrice() {
   const dispatch = useDispatch();
@@ -43,18 +43,18 @@ function BitcoinPrice() {
   }
   return (
     <div className="wrap">
-      <Typography className="header">
+      <Typography sx={{ margin: '10px' }} className="header">
         Bitcoin price is
         {' '}
         {price}
         $
       </Typography>
-      <Button onClick={increaseHandle} className="increase" variant="contained">
+      <Button sx={{ margin: '10px' }} onClick={increaseHandle} className="increase" variant="contained">
         Increase Bitcoin Price (+
         {local.bitcoinValue}
         )
       </Button>
-      <Button onClick={decreaseHandle} className="decrease" variant="contained">
+      <Button sx={{ margin: '10px' }} onClick={decreaseHandle} className="decrease" variant="contained">
         Decrease Bitcoin Price (-
         {local.bitcoinValue}
         $)

@@ -11,13 +11,12 @@ import History from '../History';
 import Sidebar from '../Sidebar';
 import Header from '../Header';
 import Error from '../Error';
-import './Dashboard.css';
 
 function Dashboard() {
   return (
     <div>
       <Header />
-      <Container maxWidth="false">
+      <Container maxWidth={false} disableGutters>
         <Router>
           <Sidebar />
           <Routes>

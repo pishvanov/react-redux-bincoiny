@@ -7,10 +7,12 @@ import Menu from './Menu';
 function Sidebar() {
   return (
     <Box
-      className="sidebar"
       sx={{
+        height: '100vh',
+        marginTop: '56px',
+        position: 'fixed',
         width: '15%',
-        backgroundColor: 'background.paper',
+        backgroundColor: 'primary.main',
       }}
     >
       <Menu />

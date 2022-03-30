@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/Inbox';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
+import SellIcon from '@mui/icons-material/Sell';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 
@@ -16,50 +19,50 @@ export default function SelectedListItem() {
   };
 
   return (
-    <Box sx={{ marginTop: '46px', width: '100%', bgcolor: 'background.paper' }}>
+    <Box sx={{ width: '100%' }}>
       <List component="nav" aria-label="main mailbox folders">
-        <Link className="link" style={{ textDecoration: 'none' }} to="/wallet">
+        <Link style={{ textDecoration: 'none' }} to="/wallet">
           <ListItemButton
             selected={selectedIndex === 1}
             onClick={(event) => handleListItemClick(event, 1)}
           >
             <ListItemIcon>
-              <InboxIcon />
+              <AccountBalanceWalletIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="My Wallet" />
+            <ListItemText primary="MY WALLET" />
           </ListItemButton>
         </Link>
-        <Link className="link" style={{ textDecoration: 'none' }} to="/buy">
+        <Link style={{ textDecoration: 'none' }} to="/buy">
           <ListItemButton
             selected={selectedIndex === 2}
             onClick={(event) => handleListItemClick(event, 2)}
           >
             <ListItemIcon>
-              <InboxIcon />
+              <ShoppingCartIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="Buy Bitcoin" />
+            <ListItemText primary="BUY BITCOIN" />
           </ListItemButton>
         </Link>
-        <Link className="link" style={{ textDecoration: 'none' }} to="/sell">
+        <Link style={{ textDecoration: 'none' }} to="/sell">
           <ListItemButton
             selected={selectedIndex === 3}
             onClick={(event) => handleListItemClick(event, 3)}
           >
             <ListItemIcon>
-              <InboxIcon />
+              <SellIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="Sell Bitcoin" />
+            <ListItemText primary="SELL BITCOIN" />
           </ListItemButton>
         </Link>
-        <Link className="link" style={{ textDecoration: 'none' }} to="/bitcoin">
+        <Link style={{ textDecoration: 'none' }} to="/bitcoin">
           <ListItemButton
             selected={selectedIndex === 4}
             onClick={(event) => handleListItemClick(event, 4)}
           >
             <ListItemIcon>
-              <InboxIcon />
+              <PriceChangeIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="Bitcoin Price" />
+            <ListItemText primary="BITCOIN PRICE" />
           </ListItemButton>
         </Link>
       </List>

@@ -9,7 +9,7 @@ import {
   deposit, withdraw, setError, resetError,
 } from '../../redux/actions';
 import local from '../../constants/local';
-import './MyWallet.css';
+import '../pages.css';
 
 function MyWallet() {
   const dispatch = useDispatch();
@@ -43,21 +43,21 @@ function MyWallet() {
   }
   return (
     <div className="wrap">
-      <Typography className="header">Your Bitcoin wallet</Typography>
-      <Typography className="descriprion">
+      <Typography sx={{ margin: '10px' }} className="header">Your Bitcoin wallet</Typography>
+      <Typography sx={{ margin: '10px' }} className="descriprion">
         You now own
         {' '}
         {coins}
         {' '}
         Bitcoins
       </Typography>
-      <Button onClick={depositHandle} className="deposit" variant="contained">
+      <Button sx={{ margin: '10px' }} onClick={depositHandle} className="deposit" variant="contained">
         Deposit
         {' '}
         {local.balanceValue}
         $
       </Button>
-      <Button onClick={withdrawHandle} className="withdraw" variant="contained">
+      <Button sx={{ margin: '10px' }} onClick={withdrawHandle} className="withdraw" variant="contained">
         Widthdraw
         {' '}
         {local.balanceValue}

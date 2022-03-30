@@ -7,7 +7,7 @@ import Alert from '@mui/material/Alert';
 
 import { buy, setError, resetError } from '../../redux/actions';
 import local from '../../constants/local';
-import './BuyBitcoin.css';
+import '../pages.css';
 
 function BuyBitcoin() {
   const dispatch = useDispatch();
@@ -37,14 +37,14 @@ function BuyBitcoin() {
   }
   return (
     <div className="wrap">
-      <Typography className="header">
+      <Typography sx={{ margin: '10px' }} className="header">
         Bitcoin price is
         {' '}
         {price}
         $
       </Typography>
-      <Typography className="descriprion">{price < local.bitcoinHighPrice ? local.buyByLowPrice : local.buyByHighPrice}</Typography>
-      <Button onClick={buyHandle} className="deposit" variant="contained">Buy 1 Bitcoin</Button>
+      <Typography sx={{ margin: '10px' }} className="descriprion">{price < local.bitcoinHighPrice ? local.buyByLowPrice : local.buyByHighPrice}</Typography>
+      <Button sx={{ margin: '10px' }} onClick={buyHandle} className="deposit" variant="contained">Buy 1 Bitcoin</Button>
     </div>
   );
 }

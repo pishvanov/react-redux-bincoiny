@@ -1,4 +1,8 @@
 import React from 'react';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
 import { useSelector } from 'react-redux';
 
 import Box from '@mui/material/Box';
@@ -9,20 +13,34 @@ function History() {
     <Box
       className="history"
       sx={{
-        marginTop: '56px',
+        position: 'relative',
+        marginLeft: '85%',
+        marginTop: '64px',
         width: '15%',
-        backgroundColor: 'background.paper',
+        minHeight: '93vh',
+        backgroundColor: 'secondary.lightGrey',
       }}
     >
       <div>
         {history.map((item) => (
-          <div key={history.index}>
-            <div>{item.date}</div>
-            <br />
-            <div>{item.message}</div>
+          <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'secondary.lightGrey' }}>
+            <ListItem alignItems="flex-start" key={history.index}>
+              <ListItemText
+                secondary={(
+                  <Typography
+                    sx={{ display: 'inline' }}
+                    component="span"
+                    variant="body2"
+                    color="text.primary"
+                  >
+                    {item.date}
+                  </Typography>
+        )}
+                primary={item.message}
+              />
+            </ListItem>
             <hr />
-            <br />
-          </div>
+          </List>
         ))}
       </div>
     </Box>
