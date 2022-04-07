@@ -1,8 +1,10 @@
 import React from 'react';
 import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import ListItemText from '@mui/material/ListItemText';
+
 import { useSelector } from 'react-redux';
 
 import Box from '@mui/material/Box';
@@ -11,20 +13,17 @@ function History() {
   const { history } = useSelector((state) => state.historyReducer);
   return (
     <Box
-      className="history"
       sx={{
-        position: 'relative',
-        marginLeft: '85%',
-        marginTop: '64px',
-        width: '15%',
-        minHeight: '93vh',
+        width: '25vh',
         backgroundColor: 'secondary.lightGrey',
+        justifyContent: 'flex-end',
+        overflowY: 'scroll',
       }}
     >
       <div>
         {history.map((item) => (
-          <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'secondary.lightGrey' }}>
-            <ListItem alignItems="flex-start" key={history.index}>
+          <List sx={{ bgcolor: 'secondary.lightGrey' }}>
+            <ListItem key={history.index}>
               <ListItemText
                 secondary={(
                   <Typography
@@ -39,7 +38,7 @@ function History() {
                 primary={item.message}
               />
             </ListItem>
-            <hr />
+            <Divider variant="fullWidth" component="li" />
           </List>
         ))}
       </div>

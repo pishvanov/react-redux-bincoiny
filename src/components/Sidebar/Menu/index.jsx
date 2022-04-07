@@ -19,9 +19,9 @@ export default function SelectedListItem() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{}}>
       <List component="nav" aria-label="main mailbox folders">
-        <Link style={{ textDecoration: 'none' }} to="/wallet">
+        <Link style={{ textDecoration: 'none' }} to="/dasboard/wallet">
           <ListItemButton
             selected={selectedIndex === 1}
             onClick={(event) => handleListItemClick(event, 1)}
@@ -32,7 +32,7 @@ export default function SelectedListItem() {
             <ListItemText primary="MY WALLET" />
           </ListItemButton>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/buy">
+        <Link style={{ textDecoration: 'none' }} to="/dasboard/buy">
           <ListItemButton
             selected={selectedIndex === 2}
             onClick={(event) => handleListItemClick(event, 2)}
@@ -43,7 +43,7 @@ export default function SelectedListItem() {
             <ListItemText primary="BUY BITCOIN" />
           </ListItemButton>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/sell">
+        <Link style={{ textDecoration: 'none' }} to="/dasboard/sell">
           <ListItemButton
             selected={selectedIndex === 3}
             onClick={(event) => handleListItemClick(event, 3)}
@@ -54,7 +54,7 @@ export default function SelectedListItem() {
             <ListItemText primary="SELL BITCOIN" />
           </ListItemButton>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/bitcoin">
+        <Link style={{ textDecoration: 'none' }} to="/dasboard/bitcoin">
           <ListItemButton
             selected={selectedIndex === 4}
             onClick={(event) => handleListItemClick(event, 4)}

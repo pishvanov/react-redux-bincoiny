@@ -43,4 +43,19 @@ export const historyRecord = (object) => ({
   payload: object,
 });
 
+export const signIn = (boolean) => ({
+  type: actionTypes.SIGN_IN,
+  payload: boolean,
+});
+
+export const signOut = (boolean) => ({
+  type: actionTypes.SIGN_OUT,
+  payload: boolean,
+});
+
+export const signUp = (object) => ({
+  type: actionTypes.SIGN_UP,
+  payload: object,
+});
+
 export default deposit;

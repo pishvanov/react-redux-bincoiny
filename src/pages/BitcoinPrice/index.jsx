@@ -44,20 +44,13 @@ function BitcoinPrice() {
   return (
     <div className="wrap">
       <Typography sx={{ margin: '10px' }} className="header">
-        Bitcoin price is
-        {' '}
-        {price}
-        $
+        Bitcoin price is {price}$
       </Typography>
       <Button sx={{ margin: '10px' }} onClick={increaseHandle} className="increase" variant="contained">
-        Increase Bitcoin Price (+
-        {local.bitcoinValue}
-        )
+        Increase Bitcoin Price (+{local.bitcoinValue}$)
       </Button>
       <Button sx={{ margin: '10px' }} onClick={decreaseHandle} className="decrease" variant="contained">
-        Decrease Bitcoin Price (-
-        {local.bitcoinValue}
-        $)
+        Decrease Bitcoin Price (-{local.bitcoinValue}$)
       </Button>
     </div>
   );

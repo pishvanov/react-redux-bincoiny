@@ -23,6 +23,20 @@ const theme = createTheme({
         },
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+        },
+      },
+    },
+  },
+  MuiButtonBase: {
+    styleOverrides: {
+      root: {
+        padding: 0,
+      },
+    },
   },
   palette: {
     primary: {

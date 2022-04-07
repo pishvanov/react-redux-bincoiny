@@ -8,6 +8,9 @@ const actionTypes = {
   SET_ERROR: 'SET_ERROR',
   RESET_ERROR: 'RESET_ERROR',
   HISTORY_RECORD: 'HISTORY_RECORD',
+  SIGN_IN: 'SIGN_IN',
+  SIGN_UP: 'SIGN_UP',
+  SIGN_OUT: 'SIGN_OUT',
 };
 
 export default actionTypes;
