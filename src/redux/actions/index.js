@@ -43,4 +43,9 @@ export const historyRecord = (object) => ({
   payload: object,
 });
 
+export const walletInfo = (string) => ({
+  type: actionTypes.GET_WALLET_INFO_REQUESTED,
+  payload: string,
+});
+
 export default deposit;

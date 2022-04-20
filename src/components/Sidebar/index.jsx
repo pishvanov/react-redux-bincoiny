@@ -8,9 +8,7 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        height: '100vh',
         marginTop: '56px',
-        position: 'fixed',
         width: '15%',
         backgroundColor: 'primary.main',
       }}

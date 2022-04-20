@@ -19,7 +19,7 @@ export default function SelectedListItem() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%', position: 'sticky' }}>
       <List component="nav" aria-label="main mailbox folders">
         <Link style={{ textDecoration: 'none' }} to="/wallet">
           <ListItemButton
@@ -63,6 +63,17 @@ export default function SelectedListItem() {
               <PriceChangeIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
             <ListItemText primary="BITCOIN PRICE" />
+          </ListItemButton>
+        </Link>
+        <Link style={{ textDecoration: 'none' }} to="/wallet1">
+          <ListItemButton
+            selected={selectedIndex === 1}
+            onClick={(event) => handleListItemClick(event, 1)}
+          >
+            <ListItemIcon>
+              <AccountBalanceWalletIcon style={{ color: 'lightgrey' }} />
+            </ListItemIcon>
+            <ListItemText primary="WALLET INFO" />
           </ListItemButton>
         </Link>
       </List>

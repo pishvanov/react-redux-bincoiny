@@ -11,6 +11,7 @@ import History from '../History';
 import Sidebar from '../Sidebar';
 import Header from '../Header';
 import Error from '../Error';
+import WalletInfo from '../../pages/WalletInfo';
 
 function Dashboard() {
   return (
@@ -20,7 +21,8 @@ function Dashboard() {
         <Router>
           <Sidebar />
           <Routes>
-            <Route path="/wallet" exect element={<MyWallet />} />
+            <Route path="/wallet1" element={<WalletInfo />} />
+            <Route path="/wallet" element={<MyWallet />} />
             <Route path="/buy" element={<BuyBitcoin />} />
             <Route path="/sell" element={<SellBitcoin />} />
             <Route path="/bitcoin" element={<BitcoinPrice />} />
