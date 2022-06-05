@@ -6,8 +6,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import PriceChangeIcon from '@mui/icons-material/PriceChange';
-import SellIcon from '@mui/icons-material/Sell';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 
@@ -19,9 +17,9 @@ export default function SelectedListItem() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{}}>
       <List component="nav" aria-label="main mailbox folders">
-        <Link style={{ textDecoration: 'none' }} to="/wallet">
+        <Link style={{ textDecoration: 'none' }} to="/">
           <ListItemButton
             selected={selectedIndex === 1}
             onClick={(event) => handleListItemClick(event, 1)}
@@ -29,40 +27,18 @@ export default function SelectedListItem() {
             <ListItemIcon>
               <AccountBalanceWalletIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="MY WALLET" />
+            <ListItemText primary="FIND TRANSACTIONS" />
           </ListItemButton>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/buy">
+        <Link style={{ textDecoration: 'none' }} to="/soon">
           <ListItemButton
             selected={selectedIndex === 2}
-            onClick={(event) => handleListItemClick(event, 2)}
-          >
-            <ListItemIcon>
-              <ShoppingCartIcon style={{ color: 'lightgrey' }} />
-            </ListItemIcon>
-            <ListItemText primary="BUY BITCOIN" />
-          </ListItemButton>
-        </Link>
-        <Link style={{ textDecoration: 'none' }} to="/sell">
-          <ListItemButton
-            selected={selectedIndex === 3}
-            onClick={(event) => handleListItemClick(event, 3)}
-          >
-            <ListItemIcon>
-              <SellIcon style={{ color: 'lightgrey' }} />
-            </ListItemIcon>
-            <ListItemText primary="SELL BITCOIN" />
-          </ListItemButton>
-        </Link>
-        <Link style={{ textDecoration: 'none' }} to="/bitcoin">
-          <ListItemButton
-            selected={selectedIndex === 4}
             onClick={(event) => handleListItemClick(event, 4)}
           >
             <ListItemIcon>
               <PriceChangeIcon style={{ color: 'lightgrey' }} />
             </ListItemIcon>
-            <ListItemText primary="BITCOIN PRICE" />
+            <ListItemText primary="COMING SOON" />
           </ListItemButton>
         </Link>
       </List>
