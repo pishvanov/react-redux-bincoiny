@@ -9,6 +9,30 @@ const theme = createTheme({
         },
       },
     },
+    MuiDrawer: {
+      styleOverrides: {
+        root: {
+          height: '100%',
+        },
+      },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          marginTop: '300px',
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          '@media (min-width: 599px)': {
+            paddingLeft: '9px',
+            paddingRight: '9px',
+          },
+        },
+      },
+    },
     MuiListItemButton: {
       styleOverrides: {
         root: {
@@ -21,6 +45,50 @@ const theme = createTheme({
             backgroundColor: '#364151',
           },
         },
+      },
+    },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            backgroundColor: 'rgb(54 67 120)',
+            color: 'lightgrey',
+          },
+          '&:hover': {
+            backgroundColor: 'rgb(247 148 19)',
+          },
+          '&.Mui-selected:hover': {
+            backgroundColor: '#364151',
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: 'lightgrey',
+          '&.Mui-active': {
+            backgroundColor: 'white',
+            fontweight: '500',
+          },
+          '&:hover': {
+            backgroundColor: '#364151',
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+        },
+      },
+    },
+  },
+  MuiButtonBase: {
+    styleOverrides: {
+      root: {
+        padding: 0,
       },
     },
   },

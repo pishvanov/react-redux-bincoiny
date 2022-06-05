@@ -1,31 +1,27 @@
 import ActionTypes from '../../constants/actionTypes';
 
 const initialState = {
-  wallet: {},
-  received: {},
-  spent: {},
+  blocks: null,
   fetching: false,
   error: null,
 };
 
-const walletInfoReducer = (state = initialState, action = {}) => {
+const blocksReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case ActionTypes.GET_WALLET_INFO_REQUESTED:
+    case ActionTypes.GET_BLOCKS_REQUESTED:
       return {
         ...state,
         fetching: true,
         error: null,
       };
-    case ActionTypes.GET_WALLET_INFO_RECEIVED:
+    case ActionTypes.GET_BLOCKS_RECEIVED:
       return {
         ...state,
         fetching: false,
         error: null,
-        wallet: action.wallet,
-        received: action.received,
-        spent: action.spent,
+        blocks: action.blocks,
       };
-    case ActionTypes.GET_WALLET_INFO_REJECTED:
+    case ActionTypes.GET_BLOCKS_REJECTED:
       return {
         ...state,
         fetching: false,
@@ -36,4 +32,4 @@ const walletInfoReducer = (state = initialState, action = {}) => {
   }
 };
 
-export default walletInfoReducer;
+export default blocksReducer;

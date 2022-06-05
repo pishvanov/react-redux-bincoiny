@@ -7,29 +7,23 @@ import {
 import api from '../../api';
 import ActionTypes from '../../constants/actionTypes';
 
-function* getWalletInfoSaga({ payload: url }) {
+function* getWalletInfoSaga() {
   try {
-    const { data: wallet } = yield call(api.get, `/get_address_balance/BTC/${url}`);
-    const { data: received } = yield call(api.get, `/get_tx_received/BTC/${url}`);
-    const { data: spent } = yield call(api.get, `/get_tx_spent/BTC/${url}`);
+    const { data: blocks } = yield call(api.get, '/blocks');
     yield put({
-      type: ActionTypes.GET_WALLET_INFO_RECEIVED,
-      wallet,
-      received,
-      spent,
+      type: ActionTypes.GET_BLOCKS_RECEIVED,
+      blocks,
     });
-    console.log(1);
   } catch (error) {
     yield put({
-      type: ActionTypes.GET_WALLET_INFO_REJECTED,
+      type: ActionTypes.GET_BLOCKS_REJECTED,
       error,
     });
-    console.log(2);
   }
 }
 
 function* watchGetWalletInfo() {
-  yield takeEvery(ActionTypes.GET_WALLET_INFO_REQUESTED, getWalletInfoSaga);
+  yield takeEvery(ActionTypes.GET_BLOCKS_REQUESTED, getWalletInfoSaga);
 }
 
 export default watchGetWalletInfo;

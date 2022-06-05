@@ -1,16 +1,21 @@
 import * as React from 'react';
-import { useSelector } from 'react-redux';
-
-import Typography from '@mui/material/Typography';
 import Icon from '@mui/material/Icon';
 import Toolbar from '@mui/material/Toolbar';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import { makeStyles } from '@material-ui/core';
 
 import logo from '../../assets/img/logo-small.png';
 
+const useStyles = makeStyles({
+  logo: {
+    width: 36,
+    height: 36,
+  },
+});
+
 function Header() {
-  const data = useSelector((state) => state.walletReducer);
+  const classes = useStyles();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -19,28 +24,8 @@ function Header() {
           <Icon
             sx={{ width: '36px', height: '36px', marginRight: '12px' }}
           >
-            <img src={logo} alt="logo" className="logo-img" />
+            <img src={logo} alt="logo" className={classes.logo} />
           </Icon>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 1 }}>
-            BITCOIN FRENZY
-          </Typography>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 1 }}>
-            1 BITCOIN =
-            {' '}
-            {data.price}
-            $
-          </Typography>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 0 }}>
-            <div className="wallet">
-              {data.money}
-              $
-            </div>
-            <div className="coins">
-              {data.coins}
-              {' '}
-              BITCOINS
-            </div>
-          </Typography>
         </Toolbar>
       </AppBar>
     </Box>

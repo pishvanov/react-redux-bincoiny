@@ -1,14 +1,12 @@
 import { combineReducers } from 'redux';
 import errorReducer from './errorReducer';
-import walletReducer from './walletReducer';
-import historyReducer from './historyReducer';
-import walletInfoReducer from './walletInfoReducer';
+import blocksReducer from './blocksReducer';
+import transactionsReducer from './transactionsReducer';
 
 const reducers = combineReducers({
-  walletReducer,
   errorReducer,
-  historyReducer,
-  walletInfoReducer,
+  blocksReducer,
+  transactionsReducer,
 });
 
 export default reducers;

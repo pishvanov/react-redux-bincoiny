@@ -7,7 +7,7 @@ import local from '../../constants/local';
 function Error() {
   return (
     <div className="wrap">
-      <Alert sx={{ marginTop: '100px' }} severity="error">{local.error}</Alert>
+      <Alert sx={{ marginTop: '45vh' }} severity="error">{local.error}</Alert>
     </div>
   );
 }
