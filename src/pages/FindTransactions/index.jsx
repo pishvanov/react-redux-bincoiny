@@ -33,29 +33,29 @@ function Wallet() {
   }, []);
   const findTransactions = (currentValue = 0) => {
     blocks?.forEach(({ txs }) => {
-      txs?.forEach((all) => {
+      txs?.forEach((tx) => {
         switch (selectedIndex) {
           case '0': {
-            if (Math.round(all.value) === Math.round(currentValue)) {
-              arr.push(all);
+            if (Math.round(tx.value) === Math.round(currentValue)) {
+              arr.push(tx);
             }
             break;
           }
           case '1': {
-            if (all.value === currentValue) {
-              arr.push(all);
+            if (tx.value === currentValue) {
+              arr.push(tx);
             }
             break;
           }
           case '2': {
-            if (parseFloat(all.value) > currentValue) {
-              arr.push(all);
+            if (parseFloat(tx.value) > currentValue) {
+              arr.push(tx);
             }
             break;
           }
           case '3': {
-            if (parseFloat(all.value) < currentValue) {
-              arr.push(all);
+            if (parseFloat(tx.value) < currentValue) {
+              arr.push(tx);
             }
             break;
           }

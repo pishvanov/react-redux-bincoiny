@@ -41,7 +41,7 @@ function StickyHeadTable({ rows }) {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, fontWeight: 600 }}
                 >
                   {column.label}
                 </TableCell>
